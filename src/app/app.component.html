@@ -1,0 +1,60 @@
+ <mat-toolbar color="warn">
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>poll</mat-icon>
+  </button>
+  <span>Stock</span>
+  <span class="example-spacer"></span>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Company</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="company">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let company of CompanyList" [value]="company">{{company}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <button mat-flat-button><mat-icon>add_circle</mat-icon> Add Company</button>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <mat-icon>share</mat-icon>
+ </button>
+</mat-toolbar>
+
+
+<!-- <header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><h4>Stock</h4></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <button type="button" class="btn btn-light" routerLink="/company">Add Company</button>
+          <div class="nav-item dropdown">
+            <select class="nav-link dropdown-toggle" name="Company" class="form-control" data-toggle="dropdown" (change)="searchCompany($event)">
+              <option>--Select--</option>
+              <option [value]="com.code" *ngFor="let com of CompanyList">
+                {{com.name}}
+              </option>
+            </select>
+          </div>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  
+</header>
+
+<body>
+  <div style="margin-top:30px">
+    <router-outlet></router-outlet>
+  </div>
+</body> -->
